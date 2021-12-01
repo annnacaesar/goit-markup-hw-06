@@ -559,7 +559,8 @@ img {
 	background: rgba(33, 150, 243, 0.9);
 
 	transform: translateY(100%);
-	transition: transform var(--transition-duration) var(--timing-function);
+	transition: transform var(--transition-duration) var(--timing-function),
+		opasity var(--transition-duration) var(--timing-function);
 }
 
 .projects-link:hover .projects-overlay-text,
@@ -974,6 +975,61 @@ img {
 	color: #757575;
 }
 
+/* ====================КАСТОМНИЙ ЧЕКБОКС==================== */
+
+.check-input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	margin-right: 7px;
+}
+
+.check-label {
+	cursor: pointer;
+}
+
+.check-label span {
+	position: relative;
+}
+
+.check-icon-vector {
+	position: absolute;
+	top: 50%;
+	left: -12px;
+	transform: translateY(-50%);
+	display: inline-block;
+	width: 16px;
+	height: 15px;
+
+	transition: fill var(--transition-duration) var(--timing-function),
+		background-color var(--transition-duration) var(--timing-function),
+		border-radius var(--transition-duration) var(--timing-function);
+}
+
+.check-input:checked + .check-icon-vector {
+	fill: var(--accent-color);
+	background-color: var(--accent-color);
+	border-radius: 2px;
+}
+
+.check-icon {
+	position: absolute;
+	/* border: 1px solid tomato; */
+	top: 2px;
+	right: 8px;
+
+	width: 12px;
+	height: 10px;
+	fill: #ffffff;
+}
+
+.check-input:focus + .check-icon-vector {
+	fill: var(--accent-color);
+}
+
+/* -----------------------кінець кастомного чекбоксу--------------- */
+
 .form-agree .policy {
 	text-decoration: underline;
 
@@ -1001,6 +1057,8 @@ img {
 	align-items: center;
 	text-align: center;
 	letter-spacing: 0.06em;
+
+	transition: background-color var(--transition-duration) var(--timing-function);
 }
 
 .form button:hover,

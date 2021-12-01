@@ -423,7 +423,7 @@
           </ul>
       </div>  
 
-      <div class="footer-follow-mail">
+      <form class="footer-follow-mail">
         <p class="follow-title">Подпишитесь на рассылку</p>
         <div class="form-follow">
         <input class="follow-input" type="email" name="follow" placeholder="E-mail">
@@ -432,7 +432,7 @@
             <use href="./images/icons.svg#icon-icon"></use>
           </svg>
         </button>
-      </div>
+      </form>
 
       </div>
     </div>
@@ -443,7 +443,7 @@
     <div class="modal">
 
 
-      <form class="form js-speaker-form" autocomplete="on">
+      <form class="form js-speaker-form " autocomplete="on">
       
         <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
       
@@ -473,9 +473,23 @@
           <textarea name="comment" id="comment" rows="5" placeholder="Введите текст"></textarea>
         </div>
       
+
+        <!-- ====================КАСТОМНИЙ ЧЕКБОКС==================== -->
         <div class="form-agree">
-          <input type="checkbox" name="agreement" id="agree">
-          <label for="agree">Соглашаюсь с рассылкой и принимаю <a class="policy" href="">Условия договора</a></label>
+          <label class="check-label" for="agree">
+            <span>
+              <input class="check-input" type="checkbox" name="agreement" id="agree">
+              <svg class="check-icon-vector">
+                <use href="./images/icons.svg#icon-vector"></use>
+              </svg>
+              <svg class="check-icon">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
+            </span>
+            Соглашаюсь с рассылкой и принимаю <a class="policy" href="">Условия договора</a>
+          </label>
+           
+            
         </div>
       
         <button type="submit">Отправить</button>
