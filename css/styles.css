@@ -1033,10 +1033,17 @@ img {
 	width: 12px;
 	height: 10px;
 	fill: #ffffff;
+	opacity: 0;
+
+	transition: opacity var(--transition-duration) var(--timing-function);
 }
 
 .check-input:focus + .check-icon-vector {
 	fill: var(--accent-color);
+}
+
+.check-input:checked ~ .check-icon {
+	opacity: 1;
 }
 
 /* -----------------------кінець кастомного чекбоксу--------------- */
